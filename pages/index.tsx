@@ -2,8 +2,26 @@ import { NextPage } from 'next';
 
 import Project from '../components/Project';
 import Layout from '../components/Layout';
+import { projectsMD } from '../lib/projects';
 
-const Home: NextPage = () => {
+interface HomeProps {
+  allProjectData: any;
+}
+
+const Home: NextPage<HomeProps> = ({ allProjectData }) => {
+  console.log(allProjectData);
+
+  const projects = allProjectData.map((project: any, i: number) => (
+    <>
+      <Project
+        title={project.title}
+        link={project.id}
+        image='portfolio-03.jpg'
+        key={i}
+      />
+    </>
+  ));
+
   return (
     <Layout>
       <header className='mb-8'>
@@ -22,20 +40,20 @@ const Home: NextPage = () => {
       <aside>
         <h4 className='text-sm text-fc mb-4'>Projects</h4>
         <div className='grid grid-cols-5 grid-rows-2 gap-x-3 gap-y-3'>
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
-          <Project title='Jan-Dell' link='#' image='portfolio-03.jpg' />
+          {projects}
         </div>
       </aside>
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const allProjectData = projectsMD.getAllData();
+  return {
+    props: {
+      allProjectData,
+    },
+  };
+}
 
 export default Home;

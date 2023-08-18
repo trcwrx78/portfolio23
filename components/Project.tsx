@@ -11,7 +11,7 @@ interface ProjectProps {
 const Project: FunctionComponent<ProjectProps> = ({ title, link, image }) => {
   return (
     <div className='group col-span-1 row-span-1 bg-fc rounded-lg shadow-custom-black transform transition-transform duration-300 hover:scale-105'>
-      <Link href={link} className='relative block'>
+      <Link href={`projects/${link}`} className='relative block'>
         <img
           src={`/images/${image}`}
           alt={title}

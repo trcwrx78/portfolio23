@@ -12,6 +12,20 @@ const Nav: FunctionComponent = () => {
           height={120}
         />
       </div>
+      <ul className='mt-8'>
+        <li className='mb-4'>
+          <i className='ri-twitter-x-line'></i>
+        </li>
+        <li className='mb-4'>
+          <i className='ri-linkedin-fill'></i>
+        </li>
+        <li className='mb-4'>
+          <i className='ri-github-fill'></i>
+        </li>
+        <li className='mb-4'>
+          <i className='ri-mail-line'></i>
+        </li>
+      </ul>
     </nav>
   );
 };
