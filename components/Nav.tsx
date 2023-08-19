@@ -1,5 +1,6 @@
 import { FunctionComponent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Nav: FunctionComponent = () => {
   return (
@@ -13,17 +14,49 @@ const Nav: FunctionComponent = () => {
         />
       </div>
       <ul className='mt-8'>
-        <li className='mb-4'>
-          <i className='ri-twitter-x-line'></i>
+        <li className='mb-4 flex items-center'>
+          <i className='ri-twitter-x-line pr-2 text-fc'></i>
+          <Link
+            href='https://twitter.com/TRC_3'
+            target='_blank'
+            className='border-b border-fc hover:border-text-color pb-[0.005rem]'
+          >
+            twitter
+          </Link>
+          <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
-        <li className='mb-4'>
-          <i className='ri-linkedin-fill'></i>
+        <li className='mb-4 flex items-center'>
+          <i className='ri-linkedin-fill pr-2 text-fc'></i>
+          <Link
+            href='https://www.linkedin.com/in/torrencecole'
+            target='_blank'
+            className='border-b border-fc hover:border-text-color pb-[0.005rem]'
+          >
+            linkedin
+          </Link>
+          <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
-        <li className='mb-4'>
-          <i className='ri-github-fill'></i>
+        <li className='mb-4 flex items-center'>
+          <i className='ri-github-fill pr-2 text-fc'></i>
+          <Link
+            href='https://github.com/trcwrx78'
+            target='_blank'
+            className='border-b border-fc hover:border-text-color pb-[0.005rem]'
+          >
+            github
+          </Link>
+          <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
-        <li className='mb-4'>
-          <i className='ri-mail-line'></i>
+        <li className='mb-4 flex items-center'>
+          <i className='ri-mail-line pr-2 text-fc'></i>
+          <Link
+            href='mailto:trcole@gmail.com'
+            target='_blank'
+            className='border-b border-fc hover:border-text-color pb-[0.005rem]'
+          >
+            email
+          </Link>
+          <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
       </ul>
     </nav>
