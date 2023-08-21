@@ -18,7 +18,16 @@ module.exports = {
         fc: '#A0A0A0',
       },
       fontSize: {
-        sub: '0.8125rem',
+        sub: '0.8125rem', // 13px
+        clock: '.625rem', // 10px
+      },
+      maxWidth: {
+        'content-width': 'var(--content-width)',
+      },
+      spacing: {
+        'body-margin-left': 'var(--body-margin-left)',
+        'body-margin-right': 'var(--body-margin-right)',
+        'footer-height': 'var(--footer-height)',
       },
     },
   },

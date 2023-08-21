@@ -3,6 +3,7 @@ import PageHead from '../components/PageHead';
 import Blur from '../components/Blur';
 import Nav from '../components/Nav';
 import Trail from '../components/Trail';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -21,6 +22,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
           </div>
         </div>
       </main>
+      <Footer />
     </>
   );
 };

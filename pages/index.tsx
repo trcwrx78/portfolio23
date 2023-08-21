@@ -9,18 +9,16 @@ interface HomeProps {
 }
 
 const Home: NextPage<HomeProps> = ({ allProjectData }) => {
-  console.log(allProjectData);
-
   const projects = allProjectData.map((project: any, i: number) => (
-    <>
-      <Project
-        title={project.title}
-        link={project.id}
-        image='portfolio-03.jpg'
-        key={i}
-      />
-    </>
+    <Project
+      title={project.title}
+      link={project.id}
+      image='portfolio-03.jpg'
+      key={i}
+    />
   ));
+
+  const projectRows: number = Math.max(projects!.lenth / 5);
 
   return (
     <Layout>
@@ -37,12 +35,28 @@ const Home: NextPage<HomeProps> = ({ allProjectData }) => {
         problem-solving.
       </p>
 
-      <aside>
-        <h4 className='text-sm text-fc mb-4'>Projects</h4>
-        <div className='grid grid-cols-5 grid-rows-2 gap-x-3 gap-y-3'>
+      <section className='mb-8'>
+        <h4 className='text-base text-fg mb-4'>Projects</h4>
+        <div
+          className={`grid grid-cols-5 grid-rows-${projectRows} gap-x-3 gap-y-3`}
+        >
           {projects}
         </div>
-      </aside>
+      </section>
+
+      <section>
+        <h4 className='text-base text-fg mb-4'>Current</h4>
+        <p className='mb-4'>
+          At present, immersing myself in deep learning through hands-on
+          projects and comprehensive courses. My latest exploration has taken me
+          into the world of Java—a captivating journey, to say the least.
+        </p>
+        <p className='mb-4'>
+          Actively on the lookout for full-stack web development opportunities,
+          I have a particular interest in projects that harness the power of
+          React and Node.js.
+        </p>
+      </section>
     </Layout>
   );
 };
