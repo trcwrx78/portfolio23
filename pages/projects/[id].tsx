@@ -8,7 +8,7 @@ interface ProjectProps {
 
 const Project: FunctionComponent<ProjectProps> = ({ projectData }) => {
   return (
-    <Layout>
+    <Layout isNotHome data={projectData}>
       <h1>{projectData.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
     </Layout>
