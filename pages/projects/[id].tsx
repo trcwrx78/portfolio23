@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { projectsMD } from '../../lib/projects';
 import Layout from '../../components/Layout';
 
@@ -9,8 +9,11 @@ interface ProjectProps {
 const Project: FunctionComponent<ProjectProps> = ({ projectData }) => {
   return (
     <Layout isNotHome data={projectData}>
-      <h1>{projectData.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: projectData.contentHtml }} />
+      <h1 className='text-base mb-4'>{projectData.title}</h1>
+      <div
+        className='markdown'
+        dangerouslySetInnerHTML={{ __html: projectData.contentHtml }}
+      />
     </Layout>
   );
 };

@@ -3,12 +3,15 @@ import { NextPage } from 'next';
 import Project from '../components/Project';
 import Layout from '../components/Layout';
 import { projectsMD } from '../lib/projects';
+import { writingsMD } from '../lib/writings';
+import Writing from '../components/Writing';
 
 interface HomeProps {
   allProjectData: any;
+  allWritingData: any;
 }
 
-const Home: NextPage<HomeProps> = ({ allProjectData }) => {
+const Home: NextPage<HomeProps> = ({ allProjectData, allWritingData }) => {
   const projects = allProjectData.map((project: any, i: number) => (
     <Project
       title={project.title}
@@ -20,13 +23,26 @@ const Home: NextPage<HomeProps> = ({ allProjectData }) => {
 
   const projectRows: number = Math.max(projects!.lenth / 5);
 
+  const writings = allWritingData.map((writing: any, i: number) => {
+    const year = writing.date.split('-')[0];
+    return (
+      <Writing
+        title={writing.title}
+        link={writing.id}
+        date={year}
+        description={writing.description}
+        key={i}
+      />
+    );
+  });
+
   return (
     <Layout>
       <header className='mb-8'>
         <h2 className='text-base uppercase'>Torrence Cole</h2>
         <h3 className='text-sub text-fc uppercase'>Software Developer</h3>
       </header>
-      <p className='mb-8'>
+      <p className='mb-8 text-pc'>
         Simplifying complex problems involves breaking them into manageable
         blocks. With consistent effort, these blocks can be methodically
         assembled over time to construct comprehensive solutions. The focus is
@@ -44,14 +60,21 @@ const Home: NextPage<HomeProps> = ({ allProjectData }) => {
         </div>
       </section>
 
+      {writings.length > 0 && (
+        <section className='mb-8'>
+          <h4 className='text-base text-fg mb-4'>Writing</h4>
+          {writings}
+        </section>
+      )}
+
       <section>
         <h4 className='text-base text-fg mb-4'>Current</h4>
-        <p className='mb-4'>
+        <p className='mb-4 text-pc'>
           At present, immersing myself in deep learning through hands-on
           projects and comprehensive courses. My latest exploration has taken me
           into the world of Java—a captivating journey, to say the least.
         </p>
-        <p className='mb-4'>
+        <p className='mb-4 text-pc'>
           Actively on the lookout for full-stack web development opportunities,
           I have a particular interest in projects that harness the power of
           React and Node.js.
@@ -63,9 +86,11 @@ const Home: NextPage<HomeProps> = ({ allProjectData }) => {
 
 export async function getStaticProps() {
   const allProjectData = projectsMD.getAllData();
+  const allWritingData = writingsMD.getAllData();
   return {
     props: {
       allProjectData,
+      allWritingData,
     },
   };
 }
