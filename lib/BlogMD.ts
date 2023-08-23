@@ -10,8 +10,8 @@ interface MatterData {
 
 interface BlogPost {
   id: string;
+  date?: string;
   contentHtml?: string;
-  [key: string]: any; // for other properties parsed by gray-matter
 }
 
 interface BlogId {
@@ -21,7 +21,7 @@ interface BlogId {
 }
 
 class BlogMD {
-  private static instance: BlogMD;
+  private static instances: { [directory: string]: BlogMD } = {};
   directoryManager: string;
 
   private constructor(directory: string) {
@@ -29,14 +29,13 @@ class BlogMD {
   }
 
   static getInstance(directory: string): BlogMD {
-    // Only create new instance if one doesn't already exist
-    if (!this.instance) {
-      this.instance = new BlogMD(directory);
+    // If an instance for the directory doesn't exist, create one
+    if (!this.instances[directory]) {
+      this.instances[directory] = new BlogMD(directory);
     }
 
-    // Return the existing instance if one exists
-    // or the new instance if one doesn't exist
-    return this.instance;
+    // Return the instance for the directory
+    return this.instances[directory];
   }
 
   getAllData(): BlogPost[] {
@@ -57,10 +56,18 @@ class BlogMD {
       return {
         id,
         ...matterResult.data,
-      };
+      } as BlogPost;
     });
 
-    return allData;
+    // Sort posts by date
+    return allData.sort((a, b) => {
+      if (a.date && b.date && a.date < b.date) {
+        return 1;
+      } else if (a.date && b.date && a.date > b.date) {
+        return -1;
+      }
+      return 0; // Equal or one of them doesn't have a date
+    });
   }
 
   getAllIds(): BlogId[] {

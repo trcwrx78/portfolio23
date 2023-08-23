@@ -133,3 +133,36 @@ nav {
   column-gap: 24px;
   align-items: flex-start;
 }
+
+@media (max-width: 640px) {
+  main {
+    padding-top: 24px;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blur {
+    --h: min(12px, var(--page-top));
+    height: var(--h);
+  }
+}
+
+.markdown h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 2rem;
+}
+
+.markdown p {
+  color: #bab6b1;
+  margin-bottom: 1rem;
+}
+
+.markdown ul {
+  margin-bottom: 1rem;
+}

@@ -16,6 +16,7 @@ module.exports = {
         'text-color': '#E5E5E5',
         fg: '#F2F2F2',
         fc: '#A0A0A0',
+        pc: '#BAB6B1',
       },
       fontSize: {
         sub: '0.8125rem', // 13px
