@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Nav: FunctionComponent = () => {
   return (
-    <nav className='sticky whitespace-nowrap col-start-1'>
-      <div className='w-28 h-28 rounded-full overflow-hidden filter grayscale'>
+    <nav className='whitespace-nowrap col-start-1 p-4 sm:sticky sm:col-span-1 sm:p-0'>
+      <div className='w-16 h-16 sm:w-28 sm:h-28 rounded-full overflow-hidden filter grayscale'>
         <Image
           src='/images/dev-trc-01.jpg'
           alt='Torrence'
