@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio '23
 
-## Getting Started
 
-First, run the development server:
+A modern and responsive personal portfolio website to showcase my development skills, projects, and professional background. Built with Next.js, React, and TailwindCSS for a clean and efficient user experience.
 
+
+## Table of Contents
+
+
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Customization](#customization)
+- [Mobile Friendly Design](#mobile-friendly-design)
+- [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
+
+
+##Features
+
+
+- **Sticky Navigation:** Smooth and sticky sidebar navigation for quick access to social links.
+- **Dynamic Date Rendering:** Displayed content comes with dynamic date rendering to avoid redundancy.
+- **Animated Transitions:** Implemented 'Trail' animations for a more interactive UX.
+- **Mobile Responsiveness:** Tailored for a wide range of screen sizes.
+
+
+##Getting Started
+
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/trcwrx78/portfolio23.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. Navigate into the directory:
+```bash
+cd portfolio23 
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Install the required packages:
+```bash
+npm install
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+4. Run the development server:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Vist 'http://localhost:3000' in your browser to see the application running.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+##Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Feel free to customize the site according to your personal preferences. Most of the styles are managed with TailwindCSS, which makes it easy to tweak the design and layout. Update the content within the `/projects` and `/writings` directories to showcase your own projects and experiences.
+
+
+##Mobile Friendly Design
+
+
+Special attention has been paid to make the portfolio mobile-responsive. Whether your audience is on desktop, tablet, or mobile, rest assured they'll have an optimal viewing experience.
+
+
+##Contact
+
+
+
+- Twitter:[TRC_3](https://twitter.com/TRC_3)
+- Linkedin:[torrencecole](https://www.linkedin.com/in/torrencecole)
+- GitHub:[trcwrx78](https://github.com/trcwrx78)
+- Email[trcole@gmail.com](mailto:trcole@gmail.com)
+
+
+## Acknowledgments
+
+Special thanks to the creators of the tools and libraries used in this project, including:
+
+
+- [Next.js](https://nextjs.org/)
+- [React.js](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [RemixIcon](https://remixicon.com/)
+- [ChatGPT](https://openai.com/) for README assistance 😉
