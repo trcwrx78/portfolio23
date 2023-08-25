@@ -16,20 +16,31 @@ const Home: NextPage<HomeProps> = ({ allProjectData, allWritingData }) => {
     <Project
       title={project.title}
       link={project.id}
-      image='portfolio-03.jpg'
+      image={project.image ? project.image : `portfolio-03.jpg`}
       key={i}
     />
   ));
 
   const projectRows: number = Math.max(projects!.lenth / 5);
 
+  let prevDate: string = '';
+
   const writings = allWritingData.map((writing: any, i: number) => {
     const year = writing.date.split('-')[0];
+
+    let displayDate = year;
+    if (year === prevDate) {
+      // Don't display the year if it's the same as the previous writing
+      displayDate = '';
+    }
+    // Update the previous date for the next iteration
+    prevDate = year;
+
     return (
       <Writing
         title={writing.title}
         link={writing.id}
-        date={year}
+        date={displayDate}
         description={writing.description}
         key={i}
       />

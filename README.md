@@ -15,7 +15,7 @@ A modern and responsive personal portfolio website to showcase my development sk
 - [Acknowledgments](#acknowledgments)
 
 
-##Features
+## Features
 
 
 - **Sticky Navigation:** Smooth and sticky sidebar navigation for quick access to social links.
@@ -24,7 +24,7 @@ A modern and responsive personal portfolio website to showcase my development sk
 - **Mobile Responsiveness:** Tailored for a wide range of screen sizes.
 
 
-##Getting Started
+## Getting Started
 
 
 1. Clone the repository:
@@ -51,22 +51,22 @@ npm run dev
 ```
 
 
-Vist 'http://localhost:3000' in your browser to see the application running.
+Visit 'http://localhost:3000' in your browser to see the application running.
 
 
-##Customization
+## Customization
 
 
 Feel free to customize the site according to your personal preferences. Most of the styles are managed with TailwindCSS, which makes it easy to tweak the design and layout. Update the content within the `/projects` and `/writings` directories to showcase your own projects and experiences.
 
 
-##Mobile Friendly Design
+## Mobile Friendly Design
 
 
 Special attention has been paid to make the portfolio mobile-responsive. Whether your audience is on desktop, tablet, or mobile, rest assured they'll have an optimal viewing experience.
 
 
-##Contact
+## Contact
 
 
 

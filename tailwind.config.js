@@ -21,6 +21,7 @@ module.exports = {
       fontSize: {
         sub: '0.8125rem', // 13px
         clock: '.625rem', // 10px
+        'clock-sm': '.375rem', // 6px
       },
       maxWidth: {
         'content-width': 'var(--content-width)',

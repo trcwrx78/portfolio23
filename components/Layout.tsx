@@ -24,7 +24,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
       <main className='mx-auto relative'>
         <div className='main-grid'>
           {isNotHome ? (
-            <div className='sticky whitespace-nowrap col-start-1'>
+            <div className='sticky whitespace-nowrap col-start-1 order-last sm:order-first'>
               <Link href='/'>
                 <i className='ri-arrow-go-back-line text-fc mr-1'></i>
                 <em>Index</em>

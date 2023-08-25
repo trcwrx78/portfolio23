@@ -136,7 +136,7 @@ nav {
 
 @media (max-width: 640px) {
   main {
-    padding-top: 24px;
+    padding: 24px 0;
   }
 
   .main-grid {

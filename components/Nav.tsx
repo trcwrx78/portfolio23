@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 const Nav: FunctionComponent = () => {
   return (
-    <nav className='whitespace-nowrap col-start-1 p-4 sm:sticky sm:col-span-1 sm:p-0'>
-      <div className='w-16 h-16 sm:w-28 sm:h-28 rounded-full overflow-hidden filter grayscale'>
+    <nav className='whitespace-nowrap col-start-1 p-4 order-last sm:sticky sm:col-span-1 sm:p-0 sm:order-first'>
+      <div className='hidden sm:block sm:w-28 sm:h-28 rounded-full overflow-hidden filter grayscale'>
         <Image
           src='/images/dev-trc-01.jpg'
           alt='Torrence'
@@ -13,9 +13,9 @@ const Nav: FunctionComponent = () => {
           height={120}
         />
       </div>
-      <ul className='mt-8'>
+      <ul className='flex space-x-4 sm:mt-8 sm:flex-col sm:space-x-0'>
         <li className='mb-4 flex items-center'>
-          <i className='ri-twitter-x-line pr-2 text-fc'></i>
+          <i className='ri-twitter-x-line pr-2 text-fc hidden sm:block'></i>
           <Link
             href='https://twitter.com/TRC_3'
             target='_blank'
@@ -26,7 +26,7 @@ const Nav: FunctionComponent = () => {
           <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
         <li className='mb-4 flex items-center'>
-          <i className='ri-linkedin-fill pr-2 text-fc'></i>
+          <i className='ri-linkedin-fill pr-2 text-fc hidden sm:block'></i>
           <Link
             href='https://www.linkedin.com/in/torrencecole'
             target='_blank'
@@ -37,7 +37,7 @@ const Nav: FunctionComponent = () => {
           <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
         <li className='mb-4 flex items-center'>
-          <i className='ri-github-fill pr-2 text-fc'></i>
+          <i className='ri-github-fill pr-2 text-fc hidden sm:block'></i>
           <Link
             href='https://github.com/trcwrx78'
             target='_blank'
@@ -48,7 +48,7 @@ const Nav: FunctionComponent = () => {
           <i className='ri-arrow-right-up-line text-fc'></i>
         </li>
         <li className='mb-4 flex items-center'>
-          <i className='ri-mail-line pr-2 text-fc'></i>
+          <i className='ri-mail-line pr-2 text-fc hidden sm:block'></i>
           <Link
             href='mailto:trcole@gmail.com'
             target='_blank'

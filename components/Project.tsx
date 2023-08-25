@@ -19,7 +19,7 @@ const Project: FunctionComponent<ProjectProps> = ({ title, link, image }) => {
         />
 
         {/* Tooltip */}
-        <span className='absolute z-10 bottom-0 w-full bg-black text-white text-xs px-2 py-1 rounded-t-none rounded-b transition-opacity duration-500 opacity-0 group-hover:opacity-100'>
+        <span className='hidden md:block absolute z-10 bottom-0 w-full bg-black text-white text-xs px-2 py-1 rounded-t-none rounded-b transition-opacity duration-500 opacity-0 group-hover:opacity-100'>
           {title}
         </span>
       </Link>

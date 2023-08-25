@@ -27,8 +27,10 @@ const Footer: FunctionComponent = () => {
   return (
     <footer className='relative border-t border-fc h-12 w-[calc(100% + var(--body-margin-right) + var(--body-margin-left))]-left-body-margin-left bg-dark-gray z-10 px-body-margin-left font-mono'>
       <div className='max-w-content-width mx-auto flex justify-between items-center h-full whitespace-nowrap'>
-        <p className='text-clock text-fc'>Last visit from {data?.location}</p>
-        <div className='text-clock text-fc'>{time}</div>
+        <p className='text-clock-sm sm:text-clock text-fc'>
+          Last visit from {data?.location}
+        </p>
+        <div className='text-clock-sm sm:text-clock text-fc'>{time}</div>
       </div>
     </footer>
   );
