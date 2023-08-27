@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Script from 'next/script';
 import { FunctionComponent } from 'react';
 
 interface PageHeadProps {
@@ -19,6 +20,16 @@ const PageHead: FunctionComponent<PageHeadProps> = ({
 
   return (
     <>
+      {/* Google tag (gtag.js) - Google Analytics */}
+      <Script
+        async
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.TRACKING_CODE}`}
+      />
+      <Script id='gtag-init'>
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date()); gtag('config', '${process.env.TRACKING_CODE}');`}
+      </Script>
       <Head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
