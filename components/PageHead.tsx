@@ -23,12 +23,12 @@ const PageHead: FunctionComponent<PageHeadProps> = ({
       {/* Google tag (gtag.js) - Google Analytics */}
       <Script
         async
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.TRACKING_CODE}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-P9K45FDWMG`}
       />
       <Script id='gtag-init'>
         {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date()); gtag('config', '${process.env.TRACKING_CODE}');`}
+          gtag('js', new Date()); gtag('config', 'G-P9K45FDWMG');`}
       </Script>
       <Head>
         <meta charSet='utf-8' />
