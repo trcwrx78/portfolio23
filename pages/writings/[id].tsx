@@ -7,9 +7,17 @@ interface WritingProps {
 }
 
 const Writing: FunctionComponent<WritingProps> = ({ writingData }) => {
+  const date = new Date(writingData.date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+
   return (
     <Layout isNotHome data={writingData}>
-      <h1 className='text-base mb-4'>{writingData.title}</h1>
+      <h1 className='text-base'>{writingData.title}</h1>
+      <h2 className='text-base text-fc mb-4'>{date}</h2>
+
       <div
         className='markdown'
         dangerouslySetInnerHTML={{ __html: writingData.contentHtml }}

@@ -6,6 +6,7 @@ interface WritingProps {
   link: string;
   date: string;
   description: string;
+  oneLiner?: string;
 }
 
 const Writing: FunctionComponent<WritingProps> = ({
@@ -13,6 +14,7 @@ const Writing: FunctionComponent<WritingProps> = ({
   link,
   date,
   description,
+  oneLiner,
 }) => {
   return (
     <div className='grid grid-cols-[clamp(8em,20vw,6em),1fr] items-baseline mb-4'>
@@ -26,7 +28,7 @@ const Writing: FunctionComponent<WritingProps> = ({
             {title}
           </Link>
         </h3>
-        <p className='my-3 text-pc'>{description}</p>
+        <p className='my-3 text-pc'>{oneLiner}</p>
       </div>
     </div>
   );

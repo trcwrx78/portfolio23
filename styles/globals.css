@@ -5,6 +5,10 @@
 :root {
   --body-margin-left: max(24px, env(safe-area-inset-left));
   --body-margin-right: max(24px, env(safe-area-inset-right));
+  --code-bg: #232323;
+  --code-font-size: 13px;
+  --code-font-color: #e5e5e5;
+  --code-radius: 8px;
   --content-width: 640px;
   --footer-height: 48px;
   --gap-2x: 16px;
@@ -76,6 +80,44 @@ main {
 
 nav {
   top: var(--page-top);
+}
+
+/* Base styles for 'pre' */
+pre {
+  display: block;
+  margin: 1.85rem 0;
+  padding: 12px 16px;
+  overflow-x: auto; /* Allows horizontal scrolling if the code is too long */
+  background-color: var(--code-bg);
+  border-radius: var(--code-radius);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: var(--code-font-size);
+  line-height: 24px;
+  white-space: pre; /* Preserves whitespace and line breaks */
+  tab-size: 4;
+}
+
+/* Styles for 'code' block inside 'pre' */
+pre code {
+  font-family: inherit; /* Inherits the font from the parent 'pre' element */
+  color: var(
+    --code-font-color
+  ); /* Dark text color for contrast against light background */
+  background-color: transparent; /* No background color, since it's inherited from 'pre' */
+  border: none; /* No border, since it's inherited from 'pre' */
+  padding: 0; /* No padding, since it's already applied to the 'pre' */
+  white-space: inherit; /* Inherits the whitespace setting from the parent 'pre' element */
+}
+
+/* Inline code styles */
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  background-color: #e8e8e8;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
 #__next {

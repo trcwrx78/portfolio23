@@ -42,6 +42,7 @@ const Home: NextPage<HomeProps> = ({ allProjectData, allWritingData }) => {
         link={writing.id}
         date={displayDate}
         description={writing.description}
+        oneLiner={writing.oneLiner}
         key={i}
       />
     );
@@ -54,12 +55,16 @@ const Home: NextPage<HomeProps> = ({ allProjectData, allWritingData }) => {
         <h3 className='text-sub text-fc uppercase'>Software Developer</h3>
       </header>
       <p className='mb-8 text-pc'>
-        Simplifying complex problems involves breaking them into manageable
-        blocks. With consistent effort, these blocks can be methodically
-        assembled over time to construct comprehensive solutions. The focus is
-        on crafting digital experiences, designing intuitive user interfaces,
-        and developing APIs that power them, all in the pursuit of effective
-        problem-solving.
+        Driven by a passion for crafting digital excellence. With five years of
+        experience, I specialize in breaking down complex problems into
+        manageable components, constructing comprehensive solutions that
+        seamlessly address challenges. From intuitive user interfaces to
+        powerful APIs, I create impactful digital experiences. My expertise in
+        React, React Native, Next.js, and Node.js empowers me to innovate, while
+        my collaborative spirit thrives in diverse team environments. My work is
+        more than code; it&apos;s about transforming ideas into functional
+        solutions that inspire and empower. Join me in redefining digital
+        possibilities.
       </p>
 
       <section className='mb-8'>
@@ -81,14 +86,15 @@ const Home: NextPage<HomeProps> = ({ allProjectData, allWritingData }) => {
       <section>
         <h4 className='text-base text-fg mb-4'>Current</h4>
         <p className='mb-4 text-pc'>
-          At present, immersing myself in deep learning through hands-on
-          projects and comprehensive courses. My latest exploration has taken me
-          into the world of Java—a captivating journey, to say the least.
+          At present, I am diving deeper into my learning through hands-on
+          projects and extensive courses. While I&apos;ve dabbled in Java in the
+          past, my recent explorations have deepened my appreciation and
+          understanding of its potential.
         </p>
         <p className='mb-4 text-pc'>
           Actively on the lookout for full-stack web development opportunities,
           I have a particular interest in projects that harness the power of
-          React and Node.js.
+          React, Node.js, and Java.
         </p>
       </section>
     </Layout>
